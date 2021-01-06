@@ -49,6 +49,6 @@ public class OrderService {
 		order.setStatus(OrderStatus.DELIVERED);
 		order = repository.save(order);
 		return new OrderDTO(order);
-	}
+	} 
 
 }
