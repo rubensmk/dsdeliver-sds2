@@ -30,16 +30,25 @@ public class OrderService {
 		List<Order> list = repository.findOrdersWithProducts();
 		return list.stream().map(x -> new OrderDTO(x)).collect(Collectors.toList());
 	}
-	
+
 	@Transactional
-	public OrderDTO insert(OrderDTO dto){
-		Order order = new Order(null, dto.getAddress(), dto.getLatitude(), dto.getLongitude(),
-				Instant.now(), OrderStatus.PENDING);
+	public OrderDTO insert(OrderDTO dto) {
+		Order order = new Order(null, dto.getAddress(), dto.getLatitude(), dto.getLongitude(), Instant.now(),
+				OrderStatus.PENDING);
 		for (ProductDTO p : dto.getProducts()) {
 			Product product = productRepository.getOne(p.getId());
 			order.getProducts().add(product);
 		}
 		order = repository.save(order);
 		return new OrderDTO(order);
-		}
 	}
+
+	@Transactional
+	public OrderDTO setDelivered(Long id) {
+		Order order = repository.getOne(id);
+		order.setStatus(OrderStatus.DELIVERED);
+		order = repository.save(order);
+		return new OrderDTO(order);
+	}
+
+}
