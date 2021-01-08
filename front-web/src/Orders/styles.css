@@ -140,6 +140,7 @@
   .order-location-container {
     display: flex;
     justify-content: center;
+    padding-bottom: 50px;
   }
   
   .order-location-content {
