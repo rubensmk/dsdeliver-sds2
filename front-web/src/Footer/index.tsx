@@ -7,13 +7,13 @@ function Footer() {
         <footer className="main-footer">
             App desenvolvido durante a 2ª ed. do evento Semana DevSuperior
             <div className="footer-icons">
-                <a target="_new"><YoutubeIcon />
+                <a target="_new" href="https://www.youtube.com/channel/UC3twHmWQwtqEO7u-gB_2f7g"><YoutubeIcon />
 
                 </a>
-                <a target="_new"><LinkedInIcon />
+                <a target="_new" href="https://www.linkedin.com/school/devsuperior/"><LinkedInIcon />
 
                 </a>
-                <a target="_new"><InstagramIcon />
+                <a target="_new" href="https://www.instagram.com/devsuperior.ig/"><InstagramIcon />
 
                 </a>
             </div>
