@@ -11,7 +11,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Netlify Link][product-screenshot]](https://sds2-rubens.netlify.app/)
 
 ### Built With
 
